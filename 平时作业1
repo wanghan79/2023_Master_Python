@@ -1,0 +1,17 @@
+import random
+import string
+
+def dataSampling(**kwargs):
+    result = {}
+    for key, value in kwargs.items():
+        if isinstance(value, int) and value > 0:
+            result[key] = [random.randint(0, 100) for _ in range(value)]
+        elif isinstance(value, float) and value > 0:
+            result[key] = [random.uniform(0, 1) for _ in range(value)]
+        elif isinstance(value, str) and len(value) > 0:
+            result[key] = [''.join(random.choices(string.ascii_letters + string.digits, k=len(value))) for _ in range(value)]
+        else:
+            result[key] = []
+    return result
+result = dataSampling(numbers=5, floats=3, strings=2)
+print(result)
