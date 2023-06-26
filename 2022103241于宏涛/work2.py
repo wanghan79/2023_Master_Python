@@ -42,10 +42,10 @@ def ml_decorator(*args):
                     pred_y = clf.predict(X[slicing:])
                     multi_pred_y['RF'] = list(pred_y)
                 elif model == 'CNN':
-                    pred_y = [random.randint(0, 1) for _ in range(samples - slicing)]
+                    pred_y = [random.randint(0, 1) for _ in range(len(X) - slicing)]
                     multi_pred_y['CNN'] = list(pred_y)
                 elif model == 'RNN':
-                    pred_y = [random.randint(0, 1) for _ in range(samples - slicing)]
+                    pred_y = [random.randint(0, 1) for _ in range(len(X) - slicing)]
                     multi_pred_y['RNN'] = list(pred_y)
                 print(f'{model}执行完毕...\n')
             return data, feature
