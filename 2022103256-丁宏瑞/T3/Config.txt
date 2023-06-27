@@ -1,1 +1,4 @@
-
+RNN
+CNN
+RF
+SVM
