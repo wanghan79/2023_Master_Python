@@ -1,5 +1,4 @@
 import os
-import work_1 as w1
 
 """
 Python节课作业：
@@ -10,10 +9,7 @@ Python节课作业：
 while (True):
     index = input("输入需要展示的作业号（1、2、3）:")
     if index == '1':
-        result = w1.dataSampling(int={'num': 5, 'start': 1, 'end': 10},
-                                 float={'num': 5, 'low': 0.0, 'high': 1.0},
-                                 str={'num': 5, 'length': 6})
-        print(result)
+        os.system('python work_1.py')
     elif index == '2':
         os.system('python work_2.py')
     elif index == '3':
