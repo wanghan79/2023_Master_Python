@@ -1,7 +1,7 @@
 import random
 import string
  
-# 机器学习方法西九十七
+# 机器学习方法修饰器
 def machine_learning_methods(methods):
     def decorator(func):
         def wrapper(*args, **kwargs):
