@@ -38,13 +38,13 @@ class RNN:
 class MLMethodFactory:
     def create_ml_method(self, model):
         if model == 'SVM':
-            return SVMModel('SVM')
+            return SVM('SVM')
         elif model == 'RF':
-            return RFModel('RF')
+            return RF('RF')
         elif model == 'CNN':
-            return CNNModel('CNN')
+            return CNN('CNN')
         elif model == 'RNN':
-            return RNNModel('RNN')
+            return RNN('RNN')
         else:
             raise ValueError("Invalid model name.")
 class ACC:
@@ -70,12 +70,12 @@ class RECALL:
 class EvaluationMetricFactory:
     def create_evaluation_metric(self, metric):
         if metric == 'ACC':
-            return ACCMetric('ACC')
+            return ACC('ACC')
         elif metric == 'MCC':
-            return MCCMetric('MCC')
+            return MCC('MCC')
         elif metric == 'F1':
-            return F1Metric('F1')
+            return F1('F1')
         elif metric == 'RECALL':
-            return RECALLMetric('RECALL')
+            return RECALL('RECALL')
         else:
             raise ValueError("Invalid metric name!!!")
