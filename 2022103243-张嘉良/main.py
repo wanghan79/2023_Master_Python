@@ -1,7 +1,7 @@
 import random
-from task1 import dataSampling
-from task2 import mlMethod,accuracyMetric
-from task3 import MLFactory,SVM,RF,CNN,RNN
+from homework1 import dataSampling
+from homework2 import mlMethod,accuracyMetric
+from homework3 import MLFactory,SVM,RF,CNN,RNN
 
 def run_task1():
     result = dataSampling(int=(1, 100), float=(0, 1), str=(5, 10))
